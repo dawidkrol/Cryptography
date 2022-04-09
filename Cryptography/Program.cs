@@ -109,7 +109,7 @@ void asymmetric_encryption_RSA_PipeStream()
     byte[] publicKeyOnly;
     byte[] publicPrivate;
 
-    using (var rsa = new RSACryptoServiceProvider())
+    using (var rsa = new RSACryptoServiceProvider(2048))
     {
         publicKeyOnly = rsa.ExportCspBlob(false);
         publicPrivate = rsa.ExportCspBlob(true);
